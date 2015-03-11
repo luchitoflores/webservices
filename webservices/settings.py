@@ -69,7 +69,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ec'
 
 TIME_ZONE = 'UTC'
 
@@ -88,3 +88,18 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
+
+
+
+#Si queremos usar la base de datos como backend:
+
+#CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+
+#BROKER_URL = 'amqp://guest:guest@localhost//' #Broker para rabbitmq
+
+
+# CELERY SETTINGS REDIS
+BROKER_URL = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
