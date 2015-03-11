@@ -93,7 +93,7 @@ TEMPLATE_DIRS = (
 
 #Si queremos usar la base de datos como backend:
 
-#CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
 
 #BROKER_URL = 'amqp://guest:guest@localhost//' #Broker para rabbitmq
 
