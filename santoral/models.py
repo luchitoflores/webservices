@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class Santo(models.Model):
+    santo = models.CharField(max_length=50)
+    fecha = models.DateField()

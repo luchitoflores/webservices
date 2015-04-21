@@ -90,11 +90,6 @@ TEMPLATE_DIRS = (
 )
 
 
-
-#Si queremos usar la base de datos como backend:
-
-CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
-
 #BROKER_URL = 'amqp://guest:guest@localhost//' #Broker para rabbitmq
 
 
@@ -103,3 +98,9 @@ BROKER_URL = 'redis://localhost:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
+
+
+
+#Si queremos usar la base de datos como backend:
+#CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+CELERY_RESULT_BACKEND='redis'
